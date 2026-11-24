@@ -56,7 +56,7 @@ dependencies = [
     "litellm>=1.86.2,<2.0; python_version < '3.14'",  # model registry, pricing, providers (lazy)
     "click>=8.1.0",               # CLI framework
     "rich>=13.0.0",               # Rich terminal output
-    "opentelemetry-api>=1.24.0",  # Safe no-op OTEL API for instrumentation
+    "opentelemetry-api>=1.45.2",  # Safe no-op OTEL API for instrumentation
     "ast-grep-cli>=0.30.0",       # AST-aware code slicing (CodeCompressor); binary wheel
     "tomli>=2.0.0; python_version < '3.11'",  # tomllib backport for helper scripts
 ]
@@ -68,7 +68,7 @@ proxy = [
     "uvicorn>=0.23.0,<1.0",
     "httpx[http2]>=0.24.0",
     "openai>=2.14.0",             # OpenAI API format support
-    "mcp>=1.0.0",                 # MCP server (headroom_compress, retrieve, stats)
+    "mcp>=1.30.0",                 # MCP server (headroom_compress, retrieve, stats)
     "magika>=0.6.0",              # ML content detection for ContentRouter
     "zstandard>=0.20.0",          # Decompress zstd request bodies (Codex, etc.)
     "websockets>=13.0",           # WebSocket proxy for /v1/responses (Codex gpt-5.4+)
@@ -115,7 +115,7 @@ memory = [
 ]
 # Qdrant + Neo4j memory backend helpers
 memory-stack = [
-    "mem0ai>=1.0.0,<2.0",
+    "mem0ai>=2.0.18,<3.0",
     "qdrant-client>=1.9.0,<2.0",
     "neo4j>=5.20.0,<7.0",
 ]
@@ -150,7 +150,7 @@ relevance = [
 # `headroom/image/compressor.py` adapts both API shapes at runtime via
 # a try/except cascade. See issue #372 for context.
 image = [
-    "pillow>=10.0.0",
+    "pillow>=12.3.0",
     "sentencepiece>=0.1.99",  # Required by SigLIP tokenizer (SiglipTokenizer)
     # Python 3.6–3.12: keep the proven ORT-bundled package directly.
     # ~15 MB ONNX models auto-downloaded on first use.
@@ -191,11 +191,11 @@ agno = [
 ]
 # AWS Strands Agents SDK integration
 strands = [
-    "strands-agents>=0.1.0",
+    "strands-agents>=1.48.0",
 ]
 # MCP server for Claude Code integration
 mcp = [
-    "mcp>=1.0.0",
+    "mcp>=1.30.0",
     "httpx>=0.24.0",
 ]
 # Voice filler detection
